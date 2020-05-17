@@ -88,7 +88,7 @@ class HangryDragon(Minion):
                          **kwargs)
 
     # TODO: add this minion's text
-    # Can the minion get access to the game?
+    #  Can the minion get access to the game?
 
 
 class Houndmaster(Minion):
