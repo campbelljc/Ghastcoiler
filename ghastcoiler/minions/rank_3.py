@@ -37,8 +37,6 @@ class CrowdFavorite(Minion):
                          base_defense=4,
                          **kwargs)
 
-    # TODO: How to deal with his text if battlecries are not in the sim
-
 
 class Crystalweaver(Minion):
     def __init__(self, **kwargs):
@@ -87,8 +85,6 @@ class HangryDragon(Minion):
                          types=[MinionType.Dragon],
                          **kwargs)
 
-    # TODO: add this minion's text
-    #  Can the minion get access to the game?
 
 
 class Houndmaster(Minion):
@@ -147,9 +143,9 @@ class PackLeader(Minion):
     def on_other_enter(self, other_minion):
         if MinionType.Beast in other_minion.types:
             if self.golden:
-                other_minion.attack += 6
+                other_minion.add_attack(6)
             else:
-                other_minion.attack += 3
+                other_minion.add_attack(3)
 
 
 class PilotedShredder(Minion):
